@@ -26,6 +26,7 @@ h1{
 }
 #Profile1{
     flex-basis: 15%;
+    margin-left: 160px;
     padding-right: 6px;
     cursor: pointer;
 }
@@ -42,7 +43,7 @@ h1{
 #Profile4{
     background-color: slateblue;
     color: white;
-    width: 140px;
+    width: 130px;
     height: 31px;
     align-content: space-around;
     text-align: center;
@@ -57,7 +58,7 @@ h1{
 }
 #Profiles{
     display: flex;
-    padding-top: 25px;
+    padding-top: 35px;
     color: grey;
     align-items: center;
     text-align: center;
@@ -68,7 +69,7 @@ h1{
 }
 .Header{
     padding-top: 180px;
-    margin-left: 455px;
+    margin-left: 460px;
 }
 .Header1{
     margin-top: -55px;
