@@ -11,12 +11,17 @@ Profile1.addEventListener('click',() =>{
 Profile3.addEventListener('click',() =>{
 contact.scrollIntoView({behavior:'smooth',block:'start'})
 });
-  Profile4.addEventListener('click', () => {
+  Profile4.addEventListener('click',async () => {
+    const response = await fetch('https://ik.imagekit.io/rqos7vchl/fileToUrl/file-to-url_2EACmU1dta');
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.href ='https://ik.imagekit.io/rqos7vchl/fileToUrl/file-to-url_2EACmU1dta'
-    link.download= 'file:///C:/Users/91709/Downloads/Resume%20.pdf';
-    console.log(link);
-    saveas(Profile4);
+    link.href =url;
+    link.download= 'Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
 });
   Profile1.addEventListener('mouseover', () => {
     Profile1.classList.add('hover-color');
