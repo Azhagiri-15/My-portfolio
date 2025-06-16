@@ -6,7 +6,7 @@
     background-image: url(am9UEe.jpg);
     flex-basis: 40%;
     margin: -8px;
-    height: 630px;
+    height: 670px;
     background-size: cover;
     color: white;
 }
@@ -78,7 +78,7 @@ h1{
 .Picture{
    border-radius: 150px;
     margin-top: 95px;
-    margin-left: 55%;
+    margin-left: 60%;
     background-color: slateblue;
     padding-left: 8px;
     padding-bottom: 10px;
