@@ -279,7 +279,7 @@ h2{
     padding: 10px 10px;
     place-content: center;
     height: 170px;
-    width: 1461px;
+    width: 1460px;
 }
 #foot{
     display: flex
@@ -315,7 +315,7 @@ h2{
 }
 #backToTopBtn {
   position: fixed;
-  bottom: 86px;
+  bottom: 85px;
   right: 30px;
   z-index: 99;
   background-color: slateblue;
