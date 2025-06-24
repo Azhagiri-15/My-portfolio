@@ -236,11 +236,9 @@ h2{
 }
 .Contact1{
     flex-basis: 50%;
-    margin-left: 293px;
 }
 .Contact2{
     flex-basis: 50%;
-    margin-right: 250px;
 }
 #contact{
     margin-left: 700px;
@@ -257,7 +255,7 @@ h2{
 }
 .message{
     padding-top: 30px;
-    padding-left: 293px;
+    padding-left: 250px;
     padding-right: 250px;
     padding-bottom: 35px;
 }
