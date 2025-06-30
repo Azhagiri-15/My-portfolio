@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang    ="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -68,29 +70,29 @@
     </div>
   </div>
 </div>    
-    <h2 id="contact">CONTACT ME</h2>
+   <h2 id="contact">CONTACT ME</h2>
     <div class="container3">
         <div class="Contact1">    
-            <div class="name"> 
+            <div class="Name"> 
                     <input type="text" id="Name" placeholder="Name" style="width: 400px; height: 45px;">
             </div>
-            <div class="phone">
+            <div class="Phone">
                     <input type="tel" id="phone" placeholder="Phone" maxlength="10" style="width: 400px; height: 45px;">
             </div>
         </div>
         <div class="Contact2">
-            <div class="email"> 
+            <div class="Email"> 
                     <input type="email" id="email" placeholder="Email" style="width: 400px; height: 45px;">
             </div>
-            <div class="subject">
+            <div class="Subject">
                     <input type="text" id="subject" placeholder="Subject" style="width: 400px; height: 45px;">
                 </div>    
         </div>
     </div>
-        <div class="message">
+        <div class="Message">
             <input type="text" id="message"  placeholder="Message..." style="width: 890px; height: 60px;">
         </div>
-        <div class="send">SEND</div> 
+        <div id="Send">SEND</div>
     </div>
     </div>
     </div>
@@ -112,6 +114,48 @@
         </div>
     </footer>
     
+<!-- Imported Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore-compat.js"></script>
+<script>
+  const firebaseConfig = {
+  apiKey: "AIzaSyARqiluqEvoZhvQm4c-M3dVUZZvtiVnsag",
+  authDomain: "my-portfolio-7e1a6.firebaseapp.com",
+  projectId: "my-portfolio-7e1a6",
+  storageBucket: "my-portfolio-7e1a6.firebasestorage.app",
+  messagingSenderId: "933275803334",
+  appId: "1:933275803334:web:eb949188a3177a2b5541c7"
+};
+
+// Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    var firestore = firebase.firestore()
+    const db = firestore.collection("My Portfolio");
+
+    const sendButton = document.querySelector("#send");
+    sendButton.addEventListener("click",(e) => {
+      e.preventDefault();
+
+        const name = document.getElementById("Name").value;
+        const phone = document.getElementById("Phone").value;
+        const email = document.getElementById("Email").value;
+        const subject = document.getElementById("Subject").value;
+        const message = document.getElementById("Message").value;
+
+        db.add({
+            Name: name,
+            Phone:phone,
+            Email:email,
+            Subject:subject,
+            Message:message
+        }).then(() => {
+              console.log("Data Saved");   
+              alert("Your Form Has been submitted");       
+        }).catch((error) => {
+          console.log("Error:",error);
+        });
+        });
+</script>
     <script defer src="Portfolio.js"></script>
 </body>
 </html>
