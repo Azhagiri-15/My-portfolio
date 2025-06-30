@@ -59,10 +59,4 @@ backToTopBtn.addEventListener("click", () => {
   Profile3.addEventListener('mouseout', () => {
     Profile3.classList.remove('hover-color');
   });
-  const openCV=document.getElementById('openCV');
-   openCV.addEventListener('mouseover', () => {
-    openCV.classList.add('hover-color');
-  });
-  openCV.addEventListener('mouseout', () => {
-    openCV.classList.remove('hover-color');
-  });
+
