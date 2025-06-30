@@ -217,7 +217,7 @@ h2{
 .project-card a:hover{
     text-decoration: underline;
 }
-.send{
+#Send{
     background-color: slateblue;
     margin-left: 700px;
     color:white ;
@@ -253,24 +253,24 @@ h2{
     border-radius: 12px;
     display: inline-block;
 }
-.message{
+.Message{
     padding-top: 30px;
     padding-left: 250px;
     padding-right: 250px;
     padding-bottom: 35px;
 }
-.name{
+.Name{
     padding-right: 35px;
     padding-top: 30px;
 }
-.email{
+.Email{
     padding-top: 30px;
 }
-.phone{
+.Phone{
     padding-right: 35px;
     padding-top: 30px;
 }
-.subject{
+.Subject{
     padding-top: 30px;
 }
 .footer {
